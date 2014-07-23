@@ -92,7 +92,7 @@ function minutes_to_DHM(raw_minutes) {
                 ping = "Failed"
                 redirect = "${request.route_url('detail', hostname = host)}"
                 document.write("                <tr>")
-                document.write("                    <td><a href='"+redirect+"'</a></td>")
+                document.write("                    <td><a href="+redirect+"</a></td>")
                 document.write("                    <td>" +ip_addr+ "</td>")
                 document.write("                    <td style='color:red'>" +ping+ "</td>")
                 document.write("                    <td>" +timestamp+ "</td>")
@@ -132,7 +132,7 @@ function minutes_to_DHM(raw_minutes) {
                 ip_addr = ${online_hosts}[x][3]
                 redirect = "${request.route_url('detail', hostname = host)}"
                 document.write("                <tr>")
-                document.write("                    <td><a href='"+redirect+"'</a></td>")
+                document.write("                    <td><a href="+redirect+"</a></td>")
                 document.write("                    <td>" +ip_addr+ "</td>")
                 document.write("                    <td style='color:green'> Successful </td>")
                 document.write("                    <td>" +timestamp+ "</td>")
