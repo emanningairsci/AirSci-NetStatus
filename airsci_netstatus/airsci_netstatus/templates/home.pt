@@ -70,35 +70,19 @@ function minutes_to_DHM(raw_minutes) {
                     <tr>
                         <th>Server Name</th>
                         <th>IP Address</th>
-                        <th>Ping Response</th>
                         <th>Time Stamp</th>
 			<th>Downtime</th>
                     </tr>
             </thead>
             <tbody>
-            <script type="text/javascript">
-            for (var x = 0; x < ${offline_hosts}.length; x++) {
-                host = ${offline_hosts}[x][0]
-                if (host == "No offline hosts"){
-                    timestamp = ""
-                    downtime = ""
-                    ip_addr = ""
-                    ping = ""
-                }
-                timestamp = ${offline_hosts}[x][1]
-                raw_downtime = ${offline_hosts}[x][2]
-                ip_addr = ${offline_hosts}[x][3]
-                downtime = minutes_to_DHM(raw_downtime)
-                ping = "Failed"
-                document.write("                <tr>")
-                document.write("                    <td><a href='${request.route_url(\"detail\", hostname = host)}'>"+host+"</a></td>")
-                document.write("                    <td>" +ip_addr+ "</td>")
-                document.write("                    <td style='color:red'>" +ping+ "</td>")
-                document.write("                    <td>" +timestamp+ "</td>")
-                document.write("                    <td>" +downtime+ "</td>")
-                document.write("                </tr>")
-            }
-            </script>
+                <tr tal:repeat: "host offline_hosts">
+                	<td><a href="${request.route_url('detail',
+                		hostname = host[0])}">
+                	</a></td>
+                	<td>${host[3]}</td>
+                	<td>${host[1]}</td>
+                	<td>${host[2]}</td>
+                </tr>
             </tbody>
 	</table>
 
@@ -117,27 +101,19 @@ function minutes_to_DHM(raw_minutes) {
                     <tr>
                         <th>Server Name</th>
                         <th>IP Address</th>
-                        <th>Ping Response</th>
                         <th>Time Stamp </th>
 			<th>Uptime</th>
                     </tr>
             </thead>
             <tbody>
-            <script type="text/javascript">
-            for (var x = 0; x < ${online_hosts}.length; x++) {
-                host = ${online_hosts}[x][0]
-                timestamp = ${online_hosts}[x][1]
-                uptime = minutes_to_DHM(${online_hosts}[x][2])
-                ip_addr = ${online_hosts}[x][3]
-                document.write("                <tr>")
-                document.write(                    <td><a href='${request.route_url(\"detail\", hostname = host)}'>"+host+"</a></td>")
-                document.write("                    <td>" +ip_addr+ "</td>")
-                document.write("                    <td style='color:green'> Successful </td>")
-                document.write("                    <td>" +timestamp+ "</td>")
-                document.write("                    <td>" +uptime+ "</td>")
-                document.write("                </tr>")
-            }
-            </script>
+                <tr tal:repeat: "host online_hosts">
+                	<td><a href="${request.route_url('detail',
+                		hostname = host[0])}">
+                	</a></td>
+                	<td>${host[3]}</td>
+                	<td>${host[1]}</td>
+                	<td>${host[2]}</td>
+                </tr>
             </tbody>
 	</table>
 
