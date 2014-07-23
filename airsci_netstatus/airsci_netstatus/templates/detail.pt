@@ -77,7 +77,7 @@ function minutes_to_DHM(raw_minutes) {
 <div id="main">
     <div class="container">
         <div class="row">
-            <h3><a href="http://0.0.0.0:8080"><i class="fa fa-sitemap"></i></a>     AirSci NetStatus </h3>
+            <h3><a href="${request.route_url(my_view)}"><i class="fa fa-sitemap"></i></a>     AirSci NetStatus </h3>
             <div metal:define-slot="content">
             </div>
         </div>
@@ -86,7 +86,7 @@ function minutes_to_DHM(raw_minutes) {
     <div class="container">
         <div class="row">
             <h2><i class="fa fa-search"></i> Details of ${hostname}</h2>
-            <a class="btn" href="http://0.0.0.0:8080/${hostname}/edit" ><i class="icon-edit"></i> Edit this host</a>
+            <a class="btn" href="${request.route_url('edit', hostname = hostname)}" ><i class="icon-edit"></i> Edit this host</a>
             <div metal:define-slot="content">
             </div>
         </div>
