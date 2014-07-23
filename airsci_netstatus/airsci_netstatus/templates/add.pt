@@ -29,7 +29,7 @@
 <div id="main">
     <div class="container">
         <div class="row">
-            <h3><a href="http://0.0.0.0:8080"><i class="fa fa-sitemap"></i></a>  AirSci NetStatus</h3>
+            <h3><a href="${request.route_url('my_view')"><i class="fa fa-sitemap"></i></a>  AirSci NetStatus</h3>
             <div metal:define-slot="content">
             </div>
         </div>
