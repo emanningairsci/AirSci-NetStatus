@@ -75,7 +75,7 @@ function minutes_to_DHM(raw_minutes) {
                     </tr>
             </thead>
             <tbody>
-                <tr tal:repeat: "host offline_hosts">
+                <tr tal:repeat="host offline_hosts">
                 	<td><a href="${request.route_url('detail',
                 		hostname = host[0])}">
                 	</a></td>
@@ -106,7 +106,7 @@ function minutes_to_DHM(raw_minutes) {
                     </tr>
             </thead>
             <tbody>
-                <tr tal:repeat: "host online_hosts">
+                <tr tal:repeat="host online_hosts">
                 	<td><a href="${request.route_url('detail',
                 		hostname = host[0])}">
                 	</a></td>
