@@ -91,7 +91,7 @@ function minutes_to_DHM(raw_minutes) {
                 downtime = minutes_to_DHM(raw_downtime)
                 ping = "Failed"
                 document.write("                <tr>")
-                document.write("                    <td><a href='${request.route_url(\'detail\', hostname = host)}'>"+host+"</a></td>")
+                document.write('                    <td><a href=\"${request.route_url('detail', hostname = host)}\">'+host+'</a></td>')
                 document.write("                    <td>" +ip_addr+ "</td>")
                 document.write("                    <td style='color:red'>" +ping+ "</td>")
                 document.write("                    <td>" +timestamp+ "</td>")
@@ -130,7 +130,7 @@ function minutes_to_DHM(raw_minutes) {
                 uptime = minutes_to_DHM(${online_hosts}[x][2])
                 ip_addr = ${online_hosts}[x][3]
                 document.write("                <tr>")
-                document.write("                    <td><a href='${request.route_url(\'detail\', hostname = host)}'>"+host+"</a></td>")
+                document.write('                    <td><a href=\"${request.route_url('detail', hostname = host)}\">'+host+'</a></td>')
                 document.write("                    <td>" +ip_addr+ "</td>")
                 document.write("                    <td style='color:green'> Successful </td>")
                 document.write("                    <td>" +timestamp+ "</td>")
