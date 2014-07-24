@@ -75,7 +75,7 @@
     function addResults (form) {
         var new_host = form.new_host.value;
         var new_ip = form.new_ip.value;
-        msg = "\n It may take up to 5 minutes for this host to become available on the home page. \nUntil then you can view this host at \n  http://spiderweb/" + new_host
+        msg = "\n It may take up to 5 minutes for this host to become available on the home page. \nUntil then you can view this host at \n  http://spiderweb/status/" + new_host
         alert(new_host+ " has been added at IP: " +new_ip+ "\n" + msg);
         return false;
     }
