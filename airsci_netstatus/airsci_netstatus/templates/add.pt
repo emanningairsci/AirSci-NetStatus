@@ -65,7 +65,7 @@
                 name="submit" onClick="addResults(this.form)">Add
                 </button>
                 <button class="btn btn-danger" type="button"
-                name="delete" onClick="location.href='http://0.0.0.0:8080'">Cancel
+                name="delete" onClick="location.href='${request.route_url('my_view')}'">Cancel
                 </button>
             </div>
         </form>
