@@ -12,7 +12,7 @@ from pymongo import MongoClient
 def dashboard(request):
     return {'project':'airsci_netstatus'}
 
-def my_view(request):
+def home(request):
     #| create a "home page" with a table of monitored hosts and their
     #| current status (ping response), IP, timestamp, and uptime or downtime
     #| TODO: Add a table for hosts whose status is logged as 'Unknown' after 
