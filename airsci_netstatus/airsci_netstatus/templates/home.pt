@@ -75,13 +75,14 @@ function minutes_to_DHM(raw_minutes) {
 			<th>Downtime</th>
                     </tr>
             </thead>
+
             <tbody>
                 <tr tal:repeat="host offline_hosts">
                 	<td><a href="${request.route_url('detail',
                 		hostname = host[0])}"> ${host[0]}
                 	</a></td>
                 	<td>${host[3]}</td>
-                	<td style="color:red">Failed</td>
+                        <td style="color:red"> Failed </td>
                 	<td>${host[1]}</td>
                         <script>
                         time = minutes_to_DHM(${host[2]})
@@ -117,7 +118,7 @@ function minutes_to_DHM(raw_minutes) {
                 		hostname = host[0])}"> ${host[0]}
                 	</a></td>
                 	<td>${host[3]}</td>
-                	<td style="color:green">Successful</td>
+                        <td style="color:green"> Successful </td>
                 	<td>${host[1]}</td>
                         <script>
                         time = minutes_to_DHM(${host[2]})
