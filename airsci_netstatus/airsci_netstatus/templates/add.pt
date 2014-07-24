@@ -77,9 +77,6 @@
         var new_ip = form.new_ip.value;
         msg = "\n It may take up to 5 minutes for this host to become available on the home page. \nUntil then you can view this host at \n  http://0.0.0.0:8080/" + new_host
         alert(new_host+ " has been added at IP: " +new_ip+ "\n" + msg);
-        // TODO: when this window is first opened, it returns an UnbountLocalError: 'raw_history_data' referenced before assignment.
-        //       Refreshing the page allows it to load.
-        window.open("http://0.0.0.0:8080/"+new_host);
         return false;
     }
     </script>
