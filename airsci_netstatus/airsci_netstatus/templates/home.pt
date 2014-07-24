@@ -83,7 +83,10 @@ function minutes_to_DHM(raw_minutes) {
                 	<td>${host[3]}</td>
                 	<td style="color:red">Failed</td>
                 	<td>${host[1]}</td>
-                	<td>${host[2]}</td>
+                        <script>
+                        time = minutes_to_DHM(${host[2]})
+                        document.write("                	<td>"+time+"</td>")
+                        </script>
                 </tr>
             </tbody>
 	</table>
@@ -116,7 +119,10 @@ function minutes_to_DHM(raw_minutes) {
                 	<td>${host[3]}</td>
                 	<td style="color:green">Successful</td>
                 	<td>${host[1]}</td>
-                	<td>${host[2]}</td>
+                        <script>
+                        time = minutes_to_DHM(${host[2]})
+                        document.write("                	<td>"+time+"</td>")
+                        </script>
                 </tr>
             </tbody>
 	</table>
