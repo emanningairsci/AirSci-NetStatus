@@ -21,9 +21,11 @@ def main(global_config, **settings):
     """
     config = Configurator(settings=settings, root_factory=Root)
     config.include('pyramid_chameleon')
-    config.add_view('airsci_netstatus.views.my_view',
+    config.add_route('home', '/')
+    config.add_view('airsci_netstatus.views.home',
                     context='airsci_netstatus:resources.Root',
-                    renderer='airsci_netstatus:templates/home.pt'
+                    renderer='airsci_netstatus:templates/home.pt',
+                    route_name = 'home'
 		    )
     config.add_route('detail', '/{hostname}')
     config.add_view('airsci_netstatus.views.detail',
