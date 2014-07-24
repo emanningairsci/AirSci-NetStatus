@@ -27,7 +27,7 @@
 <div id="main">
     <div class="container">
         <div class="row">
-            <h3><a href="${request.route_url('my_view')"><i class="fa fa-sitemap"></i></a> AirSci NetStatus </h3>
+            <h3><a href="${request.route_url('home')}"><i class="fa fa-sitemap"></i></a> AirSci NetStatus </h3>
             <div metal:define-slot="content">
             </div>
         </div>
@@ -95,7 +95,7 @@
                 name="delete" onClick="return deleteHost(this.form)">Delete this host
                 </button>
                 <button id="cancel" class="btn btn-primary" type="button"
-                name="delete" onClick="location.href=\"${request.route_url(\'detail\', hostname = hostname)}\"">Back to ${hostname}
+                name="cancel" onClick="location.href='${request.route_url('detail', hostname = hostname)}'">Back to ${hostname}
                 </button>
             </div>
             <script type="text/javascript">
