@@ -70,6 +70,7 @@ function minutes_to_DHM(raw_minutes) {
                     <tr>
                         <th>Server Name</th>
                         <th>IP Address</th>
+                        <th>Ping Response</th>
                         <th>Time Stamp</th>
 			<th>Downtime</th>
                     </tr>
@@ -80,6 +81,7 @@ function minutes_to_DHM(raw_minutes) {
                 		hostname = host[0])}"> ${host[0]}
                 	</a></td>
                 	<td>${host[3]}</td>
+                	<td style="color:red">Failed</td>
                 	<td>${host[1]}</td>
                 	<td>${host[2]}</td>
                 </tr>
@@ -101,6 +103,7 @@ function minutes_to_DHM(raw_minutes) {
                     <tr>
                         <th>Server Name</th>
                         <th>IP Address</th>
+                        <th>Ping Response</th>
                         <th>Time Stamp </th>
 			<th>Uptime</th>
                     </tr>
@@ -111,6 +114,7 @@ function minutes_to_DHM(raw_minutes) {
                 		hostname = host[0])}"> ${host[0]}
                 	</a></td>
                 	<td>${host[3]}</td>
+                	<td style="color:green">Successful</td>
                 	<td>${host[1]}</td>
                 	<td>${host[2]}</td>
                 </tr>
